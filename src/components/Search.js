@@ -8,7 +8,7 @@ const Search = (props)=>{
 	};
 
 	const handleSubmit = (e) => {
-		e.prevent.default()
+		e.preventDefault()
 		props.search(searchValue)
 		resetInputField();
 	}
@@ -17,9 +17,9 @@ const Search = (props)=>{
 		setSearchValue(e.target.value)
 	}
 	return (
-		<form className="search">
+		<form className="search" >
 			<input type="text" value={searchValue} onChange={handleChange}/>
-			<input type="submit" onClick={handleSubmit} />
+			<input type="submit" onClick={handleSubmit} value="SEARCH" />
 		</form>
 	);
 }
